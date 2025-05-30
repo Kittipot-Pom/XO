@@ -1,0 +1,116 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e0f2f7; /* สีฟ้าอ่อน */
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+h1 {
+    color: #2196f3; /* สีน้ำเงิน */
+    margin-bottom: 20px;
+    font-size: 2.2em;
+}
+
+.game-mode-selection {
+    margin-bottom: 20px;
+}
+
+.game-mode-selection button {
+    background-color: #e3f2fd; /* สีฟ้าอ่อนมาก */
+    border: 1px solid #bbdefb;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #424242;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.game-mode-selection button:hover {
+    background-color: #c0d9ed;
+}
+
+.game-mode-selection button.active {
+    background-color: #2196f3; /* สีน้ำเงิน */
+    color: #fff;
+    font-weight: bold;
+}
+
+#statusMessage {
+    margin-bottom: 25px;
+    font-size: 1.2em;
+    color: #555;
+    min-height: 30px; /* กันข้อความกระโดด */
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin: 0 auto 30px auto;
+    width: 320px; /* 3*100px + 2*10px = 320px */
+    background-color: #b3e5fc; /* สีฟ้ากลางๆ */
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border: 2px solid #81d4fa; /* สีขอบฟ้า */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.cell:hover:not(.X):not(.O) {
+    background-color: #e1f5fe; /* สีพื้นหลังอ่อนลงเมื่อ hover */
+}
+
+.cell.X {
+    color: #f44336; /* แดง */
+}
+
+.cell.O {
+    color: #4caf50; /* เขียว */
+}
+
+#resetButton {
+    background-color: #ff9800; /* ส้ม */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#resetButton:hover {
+    background-color: #fb8c00; /* ส้มเข้มขึ้น */
+}

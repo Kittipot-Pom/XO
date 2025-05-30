@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกม OX (Tic Tac Toe)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>เกม OX (Tic Tac Toe)</h1>
+        
+        <div class="game-mode-selection">
+            <button id="playerVsPlayerBtn" class="active">ผู้เล่น vs ผู้เล่น</button>
+            <button id="playerVsComputerBtn">ผู้เล่น vs คอมพิวเตอร์</button>
+        </div>
+
+        <div id="statusMessage">เริ่มเกม! ผู้เล่น X ตาเดิน</div>
+
+        <div class="game-board" id="gameBoard">
+            <div class="cell" data-cell-index="0"></div>
+            <div class="cell" data-cell-index="1"></div>
+            <div class="cell" data-cell-index="2"></div>
+            <div class="cell" data-cell-index="3"></div>
+            <div class="cell" data-cell-index="4"></div>
+            <div class="cell" data-cell-index="5"></div>
+            <div class="cell" data-cell-index="6"></div>
+            <div class="cell" data-cell-index="7"></div>
+            <div class="cell" data-cell-index="8"></div>
+        </div>
+
+        <button id="resetButton">เริ่มเกมใหม่</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
